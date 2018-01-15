@@ -28,6 +28,8 @@ function forkRepo() {
     Authorization: `token ${getToken()}`
   }
 }).then(res => console.log(res));
+
+showForkedRepo();
 }
 
 function getToken() {
