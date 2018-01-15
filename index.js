@@ -12,11 +12,17 @@ function showResults(json) {
 
 function forkRepo() {
   const repo = 'learn-co-curriculum/javascript-fetch-lab'
-  //use fetch to fork it!
+  fetch('https://api.github.com/repos/:your_ghname/:your_repo/commits/:sha/comments', {
+  method: 'POST',
+  body: JSON.stringify(postData),
+  headers: {
+    Authorization: `token ${getToken()}`
+  }
+}).then(res => console.log(res));
 }
 
 function getToken() {
   //change to your token to run in browser, but set
   //back to '' before committing so all tests pass
-  return ''
+  return 'd5a37406e38cc71a1707bc1199f0aa075f938bb7'
 }
