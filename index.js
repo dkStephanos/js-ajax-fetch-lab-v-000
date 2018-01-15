@@ -14,7 +14,14 @@ function createIssue() {
   const title = document.getElementById('title').value
   const body = document.getElementById('body').value
 
-
+  fetch('https://api.github.com/repos/learn-co-curriculum/javascript-fetch-lab/issues', {
+  method: 'post',
+  title: title,
+  body: body,
+  headers: {
+    Authorization: `token ${getToken()}`
+  }
+  }).then(res => console.log(res));
 }
 
 function showResults(json) {
