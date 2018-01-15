@@ -14,7 +14,6 @@ function forkRepo() {
   const repo = 'learn-co-curriculum/javascript-fetch-lab'
   fetch('https://api.github.com/repos/:your_ghname/:your_repo/commits/:sha/comments', {
   method: 'POST',
-  body: JSON.stringify(postData),
   headers: {
     Authorization: `token ${getToken()}`
   }
