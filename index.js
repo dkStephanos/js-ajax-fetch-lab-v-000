@@ -1,6 +1,6 @@
 function getIssues() {
   fetch('https://api.github.com/repos/learn-co-curriculum/javascript-fetch-lab/issues', {
-  method: 'post',
+  method: 'get',
   headers: {
     Authorization: `token ${getToken()}`
   }
@@ -14,7 +14,7 @@ function createIssue() {
   const title = document.getElementById('title').value
   const body = document.getElementById('body').value
 
-  
+
 }
 
 function showResults(json) {
