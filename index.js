@@ -5,6 +5,8 @@ function showIssues(json) {
 }
 
 function createIssue() {
+  const title = document.getElementById('title').value
+  const body = document.getElementById('body').value
 }
 
 function showResults(json) {
