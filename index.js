@@ -1,4 +1,10 @@
 function getIssues() {
+  fetch('https://api.github.com/repos/learn-co-curriculum/javascript-fetch-lab/issues', {
+  method: 'post',
+  headers: {
+    Authorization: `token ${getToken()}`
+  }
+}).then(res => console.log(res));
 }
 
 function showIssues(json) {
@@ -7,6 +13,8 @@ function showIssues(json) {
 function createIssue() {
   const title = document.getElementById('title').value
   const body = document.getElementById('body').value
+
+  
 }
 
 function showResults(json) {
