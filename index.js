@@ -12,7 +12,7 @@ function showResults(json) {
 
 function forkRepo() {
   const repo = 'learn-co-curriculum/javascript-fetch-lab'
-  fetch('https://api.github.com/repos/:your_ghname/:your_repo/commits/:sha/comments', {
+  fetch(repo, {
   method: 'POST',
   headers: {
     Authorization: `token ${getToken()}`
